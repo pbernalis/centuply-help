@@ -1,31 +1,55 @@
 :root {
-  --ifm-color-primary: #0ea5e9;     /* Το κύριο χρώμα του Centuply - άλλαξε το αν θες */
-  --ifm-color-primary-dark: #0284c8;
+  --ifm-color-primary: #10b981;     /* Πράσινο του Centuply - μπορείς να το αλλάξεις */
+  --ifm-color-primary-dark: #059669;
+  --ifm-color-primary-darker: #047857;
 }
 
+[data-theme='dark'] {
+  --ifm-color-primary: #34d399;
+  --ifm-color-primary-dark: #10b981;
+}
+
+/* Hero section πιο μοντέρνο */
 .hero--primary {
-  background: linear-gradient(90deg, #0ea5e9, #3b82f6);
+  background: linear-gradient(90deg, #10b981, #34d399);
   color: white;
+  padding: 6rem 0 4rem;
 }
 
 .hero__title {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.button--lg {
-  font-size: 1.1rem;
+.hero__subtitle {
+  font-size: 1.4rem;
+  opacity: 0.95;
+}
+
+/* Κουμπιά */
+.button--secondary {
+  background-color: white;
+  color: #10b981;
+  font-weight: 600;
+  border-radius: 9999px;
   padding: 14px 32px;
+  font-size: 1.1rem;
 }
 
-/* Κάνει τα cards πιο καθαρά και επαγγελματικά */
+.button--secondary:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* Cards πιο καθαρά */
 .feature-card {
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
