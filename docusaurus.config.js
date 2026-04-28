@@ -43,11 +43,13 @@ const config = {
         defaultMode: 'light',
         respectPrefersColorScheme: true,
       },
+
       navbar: {
         title: 'Centuply',
         logo: {
           alt: 'Centuply Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',           // Light mode
+          srcDark: 'img/logo-dark.png',  // Dark mode ← Αυτό είναι το σημαντικό!
         },
         items: [
           {
@@ -63,6 +65,7 @@ const config = {
           },
         ],
       },
+
       footer: {
         style: 'dark',
         links: [
@@ -82,6 +85,7 @@ const config = {
         ],
         copyright: `© ${new Date().getFullYear()} Centuply. All Rights Reserved.`,
       },
+
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
