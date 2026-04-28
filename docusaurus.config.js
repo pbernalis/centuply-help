@@ -13,7 +13,7 @@ const config = {
   organizationName: 'pbernalis',
   projectName: 'centuply-help',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   i18n: {
     defaultLocale: 'el',
