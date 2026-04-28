@@ -6,6 +6,7 @@ const sidebars = {
       label: '🚀 Getting Started',
       items: ['intro'],
     },
+    // Θα προσθέτουμε σταδιακά τις άλλες κατηγορίες
   ],
 };
 
