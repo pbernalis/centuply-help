@@ -6,7 +6,11 @@ const sidebars = {
       label: '🚀 Getting Started',
       items: ['intro'],
     },
-    // Θα προσθέτουμε σταδιακά τις άλλες κατηγορίες
+    {
+      type: 'category',
+      label: '🤖 AI Website Builder',
+      items: ['ai-builder/overview'],
+    },
   ],
 };
 
