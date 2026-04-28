@@ -15,7 +15,9 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs/intro">
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/intro">
             🚀 Getting Started Guide
           </Link>
         </div>
@@ -26,7 +28,9 @@ function HomepageHeader() {
 
 export default function Home() {
   return (
-    <Layout title="Centuply Help Center" description="Βοήθεια για το Centuply AI Website Builder">
+    <Layout
+      title="Centuply Help Center"
+      description="Βοήθεια, οδηγίες και FAQs για το Centuply AI Website Builder">
       <HomepageHeader />
       <main></main>
     </Layout>
