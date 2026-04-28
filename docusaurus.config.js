@@ -5,6 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Centuply Help Center',
   tagline: 'Όλα όσα χρειάζεσαι για να φτιάξεις και να διαχειριστείς το AI website σου',
+
   favicon: 'img/favicon.ico',
 
   url: 'https://help.centuply.com',
@@ -13,11 +14,12 @@ const config = {
   organizationName: 'pbernalis',
   projectName: 'centuply-help',
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
 
+  // === 3 ΓΛΩΣΣΕΣ ===
   i18n: {
     defaultLocale: 'el',
-    locales: ['el'],
+    locales: ['el', 'en', 'es'],
   },
 
   presets: [
@@ -48,8 +50,8 @@ const config = {
         title: 'Centuply',
         logo: {
           alt: 'Centuply Logo',
-          src: 'img/logo.png',           // Light mode
-          srcDark: 'img/logo-dark.png',  // Dark mode
+          src: 'img/logo.png',
+          srcDark: 'img/logo-dark.png',
         },
         items: [
           {
@@ -63,6 +65,11 @@ const config = {
             label: '→ Go to App',
             position: 'right',
           },
+          // Language Switcher (EN / EL / ES)
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
         ],
       },
 
@@ -74,12 +81,6 @@ const config = {
             items: [
               { label: 'Κεντρική Σελίδα', href: 'https://www.centuply.com/' },
               { label: 'App', href: 'https://app.centuply.com/app' },
-            ],
-          },
-          {
-            title: 'Help Center',
-            items: [
-              { label: 'Getting Started', to: '/docs/intro' },
             ],
           },
         ],
