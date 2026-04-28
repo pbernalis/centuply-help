@@ -49,7 +49,7 @@ const config = {
         logo: {
           alt: 'Centuply Logo',
           src: 'img/logo.png',           // Light mode
-          srcDark: 'img/logo-dark.png',  // Dark mode ← Αυτό είναι το σημαντικό!
+          srcDark: 'img/logo-dark.png',  // Dark mode
         },
         items: [
           {
