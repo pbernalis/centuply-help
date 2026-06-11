@@ -16,19 +16,19 @@ const copy = {
     finderTitle: 'Τι θέλεις να κάνεις σήμερα;',
     finderPlaceholder: 'Διάλεξε γρήγορη διαδρομή παρακάτω',
     cardCta: 'Άνοιγμα οδηγού →',
-    categoriesTitle: 'Browse by category',
+    categoriesTitle: 'Αναζήτηση ανά κατηγορία',
     categoriesSubtitle:
       'Όλες οι βασικές λειτουργίες του Centuply οργανωμένες σε καθαρές ενότητες.',
-    popularTitle: 'Popular guides',
+    popularTitle: 'Δημοφιλείς οδηγοί',
     popularSubtitle:
       'Οι οδηγοί που βοηθούν περισσότερο όταν ξεκινάς ή ετοιμάζεις το site για publish.',
-    pathTitle: 'Recommended path',
+    pathTitle: 'Προτεινόμενη διαδρομή',
     pathSubtitle: 'Ακολούθησε αυτά τα 3 βήματα για να φτάσεις γρήγορα σε live website.',
     supportTitle: 'Χρειάζεσαι περισσότερη βοήθεια;',
     supportText:
       'Άνοιξε το app, συνέχισε την επεξεργασία του site σου ή χρησιμοποίησε τους οδηγούς για να λύσεις γρήγορα τα επόμενα βήματα.',
-    appCta: 'Go to App',
-    articlesCta: 'Help Articles',
+    appCta: 'Μετάβαση στο App',
+    articlesCta: 'Άρθρα βοήθειας',
     footerNote: 'Built for business owners, creators and teams using Centuply.',
     searchChips: [
       ['Δημιουργία site', '/ai-builder/overview'],
@@ -37,28 +37,28 @@ const copy = {
       ['Domain', '/domains/connect-domain'],
     ],
     categories: [
-      ['🚀', 'Getting Started', 'Ξεκίνα σωστά με το πρώτο σου website.', '/getting-started/what-is-centuply'],
+      ['🚀', 'Ξεκινώντας', 'Ξεκίνα σωστά με το πρώτο σου website.', '/getting-started/what-is-centuply'],
       ['🤖', 'AI Builder', 'Δημιουργία website με Simple Mode ή Advanced Planner.', '/ai-builder/overview'],
       ['✏️', 'Visual Editor', 'Άλλαξε κείμενα, εικόνες, sections και CTA.', '/editor/visual-editor'],
-      ['📄', 'Pages & Content', 'Οργάνωσε σελίδες, storyboard και περιεχόμενο.', '/pages/manage-pages'],
+      ['📄', 'Σελίδες & Περιεχόμενο', 'Οργάνωσε σελίδες, storyboard και περιεχόμενο.', '/pages/manage-pages'],
       ['🎨', 'Brand & Logo', 'Διαχειρίσου brand στοιχεία, logo και visual identity.', '/brand/brand-editor'],
       ['🔎', 'SEO & Blog', 'Βελτίωσε SEO, local visibility και blog περιεχόμενο.', '/seo/seo-overview'],
-      ['📩', 'Forms & Leads', 'Ρύθμισε φόρμες, παραδόσεις και leads inbox.', '/forms/forms-builder'],
-      ['🌍', 'Publishing & Domains', 'Κάνε publish και σύνδεσε custom domain.', '/publishing/publish-site'],
-      ['💳', 'Account & Billing', 'Διαχειρίσου billing, profile και account settings.', '/account/billing'],
+      ['📩', 'Φόρμες & Leads', 'Ρύθμισε φόρμες, παραδόσεις και leads inbox.', '/forms/forms-builder'],
+      ['🌍', 'Δημοσίευση & Domains', 'Κάνε publish και σύνδεσε custom domain.', '/publishing/publish-site'],
+      ['💳', 'Λογαριασμός & Billing', 'Διαχειρίσου billing, profile και account settings.', '/account/billing'],
     ],
     popular: [
-      ['Create your first site', 'Ξεκίνα από την πρώτη δημιουργία website.', '/getting-started/create-first-site'],
-      ['Use the Visual Editor', 'Μάθε πώς να κάνεις αλλαγές με ασφάλεια.', '/editor/visual-editor'],
-      ['Preview and apply AI changes', 'Δες AI προτάσεις πριν εφαρμοστούν.', '/editor/ai-assistant-preview-apply'],
-      ['Publish your website', 'Έλεγξε το site και κάνε publish.', '/publishing/publish-site'],
-      ['Connect your domain', 'Σύνδεσε domain και έλεγξε DNS.', '/domains/connect-domain'],
-      ['Manage languages', 'Ρύθμισε multilingual περιεχόμενο.', '/localization/localization-center'],
+      ['Δημιούργησε το πρώτο σου site', 'Ξεκίνα από την πρώτη δημιουργία website.', '/getting-started/create-first-site'],
+      ['Χρησιμοποίησε τον Visual Editor', 'Μάθε πώς να κάνεις αλλαγές με ασφάλεια.', '/editor/visual-editor'],
+      ['Preview και εφαρμογή AI αλλαγών', 'Δες AI προτάσεις πριν εφαρμοστούν.', '/editor/ai-assistant-preview-apply'],
+      ['Δημοσίευσε το website σου', 'Έλεγξε το site και κάνε publish.', '/publishing/publish-site'],
+      ['Σύνδεσε το domain σου', 'Σύνδεσε domain και έλεγξε DNS.', '/domains/connect-domain'],
+      ['Διαχείριση γλωσσών', 'Ρύθμισε multilingual περιεχόμενο.', '/localization/localization-center'],
     ],
     steps: [
-      ['1', 'Create', 'Δώσε τα στοιχεία της επιχείρησης και δημιούργησε το πρώτο draft.', '/ai-builder/simple-mode'],
-      ['2', 'Edit', 'Βελτίωσε περιεχόμενο, sections, εικόνες και CTA μέσα στον editor.', '/editor/visual-editor'],
-      ['3', 'Publish', 'Έλεγξε forms, SEO, mobile και domain πριν βγει live.', '/publishing/site-health'],
+      ['1', 'Δημιουργία', 'Δώσε τα στοιχεία της επιχείρησης και δημιούργησε το πρώτο draft.', '/ai-builder/simple-mode'],
+      ['2', 'Επεξεργασία', 'Βελτίωσε περιεχόμενο, sections, εικόνες και CTA μέσα στον editor.', '/editor/visual-editor'],
+      ['3', 'Δημοσίευση', 'Έλεγξε forms, SEO, mobile και domain πριν βγει live.', '/publishing/site-health'],
     ],
   },
   en: {
@@ -71,19 +71,19 @@ const copy = {
     finderTitle: 'What do you want to do today?',
     finderPlaceholder: 'Choose a quick path below',
     cardCta: 'Read guide →',
-    categoriesTitle: 'Browse by category',
+    categoriesTitle: 'Αναζήτηση ανά κατηγορία',
     categoriesSubtitle:
       'All core Centuply features organized into clear help sections.',
-    popularTitle: 'Popular guides',
+    popularTitle: 'Δημοφιλείς οδηγοί',
     popularSubtitle:
       'The most useful guides when you are starting or preparing your website for publishing.',
-    pathTitle: 'Recommended path',
+    pathTitle: 'Προτεινόμενη διαδρομή',
     pathSubtitle: 'Follow these 3 steps to move from first draft to live website.',
     supportTitle: 'Need more help?',
     supportText:
       'Open the app, continue editing your website, or use the guides to complete the next setup step.',
-    appCta: 'Go to App',
-    articlesCta: 'Help Articles',
+    appCta: 'Μετάβαση στο App',
+    articlesCta: 'Άρθρα βοήθειας',
     footerNote: 'Built for business owners, creators and teams using Centuply.',
     searchChips: [
       ['Create a site', '/en/ai-builder/overview'],
@@ -137,8 +137,8 @@ const copy = {
     supportTitle: '¿Necesitas más ayuda?',
     supportText:
       'Abre la app, continúa editando tu sitio o usa las guías para completar el siguiente paso.',
-    appCta: 'Go to App',
-    articlesCta: 'Help Articles',
+    appCta: 'Μετάβαση στο App',
+    articlesCta: 'Άρθρα βοήθειας',
     footerNote: 'Creado para negocios, creadores y equipos que usan Centuply.',
     searchChips: [
       ['Crear un sitio', '/es/ai-builder/overview'],
@@ -322,4 +322,5 @@ export default function Home() {
     </Layout>
   );
 }
+
 
