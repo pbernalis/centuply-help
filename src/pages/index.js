@@ -15,6 +15,7 @@ const copy = {
     secondaryCta: 'Δες όλα τα θέματα',
     finderTitle: 'Τι θέλεις να κάνεις σήμερα;',
     finderPlaceholder: 'Διάλεξε γρήγορη διαδρομή παρακάτω',
+    cardCta: 'Άνοιγμα οδηγού →',
     categoriesTitle: 'Browse by category',
     categoriesSubtitle:
       'Όλες οι βασικές λειτουργίες του Centuply οργανωμένες σε καθαρές ενότητες.',
@@ -69,6 +70,7 @@ const copy = {
     secondaryCta: 'Browse all topics',
     finderTitle: 'What do you want to do today?',
     finderPlaceholder: 'Choose a quick path below',
+    cardCta: 'Read guide →',
     categoriesTitle: 'Browse by category',
     categoriesSubtitle:
       'All core Centuply features organized into clear help sections.',
@@ -123,6 +125,7 @@ const copy = {
     secondaryCta: 'Ver todos los temas',
     finderTitle: '¿Qué quieres hacer hoy?',
     finderPlaceholder: 'Elige una ruta rápida abajo',
+    cardCta: 'Leer guía →',
     categoriesTitle: 'Explorar por categoría',
     categoriesSubtitle:
       'Todas las funciones principales de Centuply organizadas en secciones claras.',
@@ -228,7 +231,7 @@ function CategoryGrid({ t }) {
               <span className={styles.categoryIcon}>{icon}</span>
               <strong>{title}</strong>
               <p>{description}</p>
-              <span className={styles.cardArrow}>Read guide →</span>
+              <span className={styles.cardArrow}>{t.cardCta}</span>
             </Link>
           ))}
         </div>
@@ -319,3 +322,4 @@ export default function Home() {
     </Layout>
   );
 }
+

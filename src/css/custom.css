@@ -127,3 +127,49 @@ html {
   border-radius: 999px;
   font-weight: 800;
 }
+
+/* Phase 1.1 — navbar and document polish */
+.navbar {
+  min-height: 4.75rem;
+}
+
+.navbar__logo {
+  height: 34px;
+}
+
+.navbar__title {
+  font-size: 1.05rem;
+}
+
+.navbar__link {
+  font-size: 0.96rem;
+}
+
+.navbar__items--right .navbar__link {
+  opacity: 0.95;
+}
+
+.navbar__items--right .navbar__link:hover {
+  opacity: 1;
+}
+
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.theme-doc-markdown {
+  max-width: 860px;
+}
+
+.theme-doc-sidebar-menu {
+  padding-top: 0.75rem;
+}
+
+.menu__link {
+  padding: 0.55rem 0.75rem;
+}
+
+.table-of-contents__link {
+  line-height: 1.45;
+}
