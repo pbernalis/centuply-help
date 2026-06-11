@@ -1,0 +1,241 @@
+---
+title: "Connect domain: configuración de dominio personalizado"
+description: "Cómo conectar tu propio dominio a tu sitio web de Centuply."
+---
+
+# Connect domain: configuración de dominio personalizado
+
+Un dominio personalizado es tu dirección profesional en internet, como `example.com` o `www.example.com`.
+
+En Centuply puedes conectar tu dominio para que los visitantes abran tu sitio desde tu propia dirección.
+
+## Cuándo usar esta guía
+
+Usa esta guía cuando:
+
+- hayas comprado un dominio,
+- quieras conectar un dominio a tu sitio,
+- quieras que el sitio abra desde `www.example.com`,
+- quieras usar una dirección profesional,
+- ya hayas publicado el sitio y quieras una URL personalizada,
+- quieras comprobar si el dominio está configurado correctamente.
+
+## Qué necesitas antes de empezar
+
+Antes de conectar un dominio, necesitas:
+
+- acceso a la cuenta donde compraste el dominio,
+- acceso a la configuración DNS,
+- tu sitio web en Centuply,
+- las instrucciones DNS que te da Centuply,
+- un poco de paciencia, porque los cambios DNS pueden tardar.
+
+## Qué es DNS
+
+DNS es el sistema que le dice a internet a dónde debe apuntar un dominio.
+
+En palabras simples:
+
+- el dominio es el nombre,
+- DNS dice a dónde apunta,
+- los DNS records son las reglas de conexión.
+
+Para que el dominio personalizado funcione, los DNS records deben ser correctos.
+
+## Paso 1 — Abre Publish o Domains
+
+Abre la aplicación de Centuply, selecciona tu sitio y abre **Publish**, **Domains** o **Connect domain**.
+
+Allí encontrarás las instrucciones para conectar un dominio personalizado.
+
+## Paso 2 — Añade tu dominio
+
+Escribe el dominio que quieres conectar.
+
+Ejemplos:
+
+- `example.com`
+- `www.example.com`
+- `mybusiness.gr`
+- `www.mybusiness.gr`
+
+Normalmente conviene admitir ambas versiones:
+
+- sin www,
+- con www.
+
+## Paso 3 — Revisa las instrucciones DNS
+
+Centuply te mostrará qué DNS records debes añadir en tu proveedor de dominio.
+
+Las instrucciones pueden incluir records como:
+
+- CNAME,
+- A record,
+- ALIAS,
+- ANAME,
+- TXT verification record.
+
+Usa siempre los valores exactos que aparecen en Centuply.
+
+## Paso 4 — Abre el panel DNS del proveedor
+
+Ve al proveedor donde compraste el dominio.
+
+Abre DNS, Zone Editor, DNS Management o una sección similar.
+
+Allí añadirás o actualizarás las records.
+
+## Paso 5 — Añade las DNS records
+
+Añade las records exactamente como aparecen en Centuply.
+
+Presta atención a:
+
+- type,
+- name o host,
+- value o target,
+- TTL,
+- si existe una record antigua en conflicto,
+- si www apunta correctamente,
+- si el root domain apunta correctamente.
+
+No cambies valores si no estás seguro.
+
+## Paso 6 — Espera la propagación DNS
+
+Después de los cambios, el dominio puede no funcionar inmediatamente.
+
+Los cambios DNS pueden tardar desde unos minutos hasta varias horas en actualizarse en todas partes.
+
+Durante este tiempo:
+
+- el dominio puede no cargar,
+- puede cargar una página antigua,
+- puede funcionar en un navegador pero no en otro,
+- puede necesitar más tiempo antes de aparecer como verified.
+
+## Paso 7 — Verifica en Centuply
+
+Vuelve a Centuply y haz clic en **Verify**, **Check status** o la opción correspondiente.
+
+Si las DNS records son correctas, el dominio aparecerá como connected o verified.
+
+Si no se verifica inmediatamente, espera un poco y vuelve a intentarlo.
+
+## Paso 8 — Elige primary domain
+
+Si tienes `example.com` y `www.example.com`, elige cuál será el primary domain.
+
+El primary domain es la dirección principal que usarás.
+
+Ejemplo:
+
+- primary: `www.example.com`
+- redirect: `example.com`
+
+o al contrario, según tus preferencias.
+
+## Paso 9 — Revisa SSL
+
+Después de conectar el dominio, el sitio debe abrir con conexión segura `https`.
+
+Comprueba que:
+
+- el dominio abre con `https://`,
+- no aparece advertencia del navegador,
+- el certificado SSL está activo,
+- las versiones www y non-www funcionan correctamente.
+
+En algunos casos, SSL puede tardar un poco en activarse.
+
+## Paso 10 — Revisa el sitio live
+
+Abre el dominio en un navegador y revisa:
+
+- página de inicio,
+- páginas principales,
+- menú,
+- botones,
+- formularios,
+- vista móvil,
+- enlaces,
+- SEO preview,
+- si los redirects funcionan correctamente.
+
+No asumas que todo está bien solo porque la verificación funcionó. Revisa el dominio real online.
+
+## Problemas comunes
+
+### El dominio no abre
+
+Posibles causas:
+
+- las DNS records aún no se han propagado,
+- una record es incorrecta,
+- una record antigua está en conflicto,
+- host o target se escribió mal,
+- hace falta más tiempo para la propagación.
+
+### www funciona pero el root domain no
+
+Puede faltar una record para el root domain o el redirect no está configurado.
+
+### El root domain funciona pero www no
+
+Puede faltar una CNAME para `www`.
+
+### Aparece una advertencia SSL
+
+Espera un poco y revisa de nuevo. Si continúa, comprueba si el dominio está verified y si las DNS records son correctas.
+
+## Buenas prácticas
+
+- Guarda una captura de las instrucciones DNS.
+- No elimines records antiguas si no sabes qué hacen.
+- Usa los valores exactos de Centuply.
+- Revisa www y non-www.
+- Espera la propagación DNS.
+- Revisa el sitio en móvil y desktop.
+- No cambies DNS records continuamente sin motivo.
+
+## Video tutorial
+
+Video sugerido para este artículo:
+
+**Título:** Cómo conectar un dominio personalizado en Centuply
+
+**Duración:** 5-7 minutos
+
+**Guion del video:**
+
+1. Abrir Publish/Domains.
+2. Añadir un dominio.
+3. Copiar instrucciones DNS.
+4. Abrir el proveedor DNS.
+5. Añadir records.
+6. Esperar y verificar.
+7. Elegir primary domain.
+8. Revisar sitio live y SSL.
+
+## Preguntas frecuentes
+
+### ¿Tengo que comprar el dominio desde Centuply?
+
+No necesariamente. Puedes usar un dominio comprado en otro proveedor.
+
+### ¿Cuánto tarda la conexión del dominio?
+
+A veces unos minutos, pero puede tardar varias horas por la propagación DNS.
+
+### ¿Qué es CNAME?
+
+Es una DNS record que conecta un subdominio, como `www`, con un destino.
+
+### ¿Qué es primary domain?
+
+Es la dirección principal que quieres que usen los visitantes.
+
+### ¿Qué hago si el dominio no se verifica?
+
+Revisa las DNS records, espera la propagación y prueba de nuevo. Si continúa, comprueba si hay records incorrectas o en conflicto.

@@ -1,0 +1,241 @@
+---
+title: "Connect domain: custom domain setup"
+description: "How to connect your own domain to your Centuply website."
+---
+
+# Connect domain: custom domain setup
+
+A custom domain is your professional address on the internet, such as `example.com` or `www.example.com`.
+
+In Centuply, you can connect your domain so visitors open your website from your own address.
+
+## When to use this guide
+
+Use this guide when:
+
+- you have purchased a domain,
+- you want to connect a domain to your website,
+- you want the website to open from `www.example.com`,
+- you want to use a professional address,
+- you have already published the website and want a custom URL,
+- you want to check whether the domain is configured correctly.
+
+## What you need before starting
+
+Before connecting a domain, you need:
+
+- access to the account where you purchased the domain,
+- access to DNS settings,
+- your website in Centuply,
+- the DNS instructions provided by Centuply,
+- a little patience, because DNS changes can take time.
+
+## What is DNS?
+
+DNS is the system that tells the internet where a domain should point.
+
+In simple terms:
+
+- the domain is the name,
+- DNS tells where it points,
+- DNS records are the connection rules.
+
+For the custom domain to work, the DNS records must be correct.
+
+## Step 1 — Open Publish or Domains
+
+Open the Centuply app, select your website, and open **Publish**, **Domains**, or **Connect domain**.
+
+There you will find the instructions for connecting a custom domain.
+
+## Step 2 — Add your domain
+
+Enter the domain you want to connect.
+
+Examples:
+
+- `example.com`
+- `www.example.com`
+- `mybusiness.gr`
+- `www.mybusiness.gr`
+
+Usually, it is useful to support both versions:
+
+- without www,
+- with www.
+
+## Step 3 — Review DNS instructions
+
+Centuply will show which DNS records you need to add to your domain provider.
+
+The instructions may include records such as:
+
+- CNAME,
+- A record,
+- ALIAS,
+- ANAME,
+- TXT verification record.
+
+Always use the exact values shown in Centuply.
+
+## Step 4 — Open your domain provider DNS panel
+
+Go to the provider where you purchased the domain.
+
+Open DNS, Zone Editor, DNS Management, or a similar section.
+
+This is where you add or update records.
+
+## Step 5 — Add DNS records
+
+Add the records exactly as shown in Centuply.
+
+Pay attention to:
+
+- type,
+- name or host,
+- value or target,
+- TTL,
+- whether an old record conflicts,
+- whether www points correctly,
+- whether the root domain points correctly.
+
+Do not change values if you are not sure.
+
+## Step 6 — Wait for DNS propagation
+
+After changes, the domain may not work immediately.
+
+DNS changes can take from a few minutes to several hours to update everywhere.
+
+During this time:
+
+- the domain may not load,
+- it may load an old page,
+- it may work in one browser but not another,
+- it may need more time before it appears as verified.
+
+## Step 7 — Verify in Centuply
+
+Return to Centuply and click **Verify**, **Check status**, or the relevant option.
+
+If the DNS records are correct, the domain will appear as connected or verified.
+
+If it does not verify immediately, wait and try again.
+
+## Step 8 — Choose primary domain
+
+If you have both `example.com` and `www.example.com`, choose which one will be the primary domain.
+
+The primary domain is the main address you will use.
+
+Example:
+
+- primary: `www.example.com`
+- redirect: `example.com`
+
+or the opposite, depending on your preference.
+
+## Step 9 — Check SSL
+
+After connecting the domain, the website should open with a secure `https` connection.
+
+Check that:
+
+- the domain opens with `https://`,
+- no browser warning appears,
+- the SSL certificate is active,
+- both www and non-www versions work correctly.
+
+In some cases, SSL may need a little time to activate.
+
+## Step 10 — Check the live website
+
+Open the domain in a browser and check:
+
+- homepage,
+- main pages,
+- menu,
+- buttons,
+- forms,
+- mobile view,
+- links,
+- SEO preview,
+- whether redirects work correctly.
+
+Do not assume everything is correct only because verification succeeded. Check the real live domain.
+
+## Common problems
+
+### The domain does not open
+
+Possible causes:
+
+- DNS records have not propagated yet,
+- a record is wrong,
+- an old record conflicts,
+- host or target was typed incorrectly,
+- more time is needed for propagation.
+
+### www works but the root domain does not
+
+A root domain record may be missing, or redirect may not be configured.
+
+### The root domain works but www does not
+
+A CNAME record for `www` may be missing.
+
+### An SSL warning appears
+
+Wait a little and check again. If it continues, check whether the domain is verified and whether DNS records are correct.
+
+## Best practices
+
+- Keep a screenshot of the DNS instructions.
+- Do not delete old records if you do not know what they do.
+- Use the exact values from Centuply.
+- Check both www and non-www.
+- Wait for DNS propagation.
+- Check the website on mobile and desktop.
+- Do not keep changing DNS records without a reason.
+
+## Video tutorial
+
+Suggested video for this article:
+
+**Title:** How to connect a custom domain in Centuply
+
+**Duration:** 5-7 minutes
+
+**Video flow:**
+
+1. Open Publish/Domains.
+2. Add a domain.
+3. Copy DNS instructions.
+4. Open the DNS provider.
+5. Add records.
+6. Wait and verify.
+7. Choose primary domain.
+8. Check live website and SSL.
+
+## Frequently asked questions
+
+### Do I need to buy a domain from Centuply?
+
+Not necessarily. You can use a domain purchased from another provider.
+
+### How long does domain connection take?
+
+Sometimes a few minutes, but it may take several hours because of DNS propagation.
+
+### What is a CNAME?
+
+It is a DNS record that connects a subdomain, such as `www`, to a target.
+
+### What is a primary domain?
+
+It is the main address you want visitors to use.
+
+### What should I do if the domain does not verify?
+
+Check DNS records, wait for propagation, and try again. If it continues, check for incorrect or conflicting records.
