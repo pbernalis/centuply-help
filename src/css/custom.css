@@ -173,3 +173,164 @@ html {
 .table-of-contents__link {
   line-height: 1.45;
 }
+
+/* Phase 2 — premium docs shell polish */
+.navbar {
+  min-height: 4.9rem;
+  padding: 0 1.25rem;
+  background: rgba(15, 23, 42, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme='light'] .navbar {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.navbar__inner {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.navbar__brand {
+  gap: 0.65rem;
+}
+
+.navbar__logo {
+  height: 36px;
+}
+
+.navbar__title {
+  font-size: 1.08rem;
+  font-weight: 900;
+}
+
+.navbar__link {
+  border-radius: 999px;
+  padding: 0.55rem 0.75rem;
+  transition: background 160ms ease, color 160ms ease, opacity 160ms ease;
+}
+
+.navbar__link:hover {
+  background: rgba(16, 185, 129, 0.12);
+  text-decoration: none;
+}
+
+.navbar__items--right .navbar__link[href*='app.centuply.com'] {
+  border: 1px solid rgba(16, 185, 129, 0.36);
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--ifm-color-primary);
+}
+
+.navbar__items--right .navbar__link[href*='app.centuply.com']:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.theme-doc-sidebar-container {
+  background: var(--centuply-section-bg);
+}
+
+.theme-doc-sidebar-menu {
+  padding: 1rem 0.75rem 2rem;
+}
+
+.menu__link {
+  margin: 0.12rem 0;
+  border-radius: 12px;
+}
+
+.menu__link:hover {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.menu__link--active {
+  background: rgba(16, 185, 129, 0.14);
+  color: var(--ifm-color-primary);
+}
+
+.theme-doc-markdown {
+  max-width: 880px;
+  padding-bottom: 4rem;
+}
+
+.theme-doc-markdown header h1,
+.markdown h1:first-child {
+  margin-bottom: 1.1rem;
+}
+
+.markdown p {
+  color: var(--centuply-text);
+}
+
+.markdown li {
+  margin: 0.35rem 0;
+}
+
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 0 14px 14px 0;
+  background: var(--centuply-section-bg);
+  padding: 1rem 1.25rem;
+}
+
+.markdown code {
+  border-radius: 7px;
+  padding: 0.12rem 0.32rem;
+}
+
+.table-of-contents {
+  padding-top: 0.6rem;
+}
+
+.table-of-contents__link {
+  border-radius: 8px;
+  padding: 0.25rem 0.4rem;
+}
+
+.table-of-contents__link:hover {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.pagination-nav {
+  gap: 1rem;
+}
+
+.pagination-nav__link {
+  border-radius: 20px;
+  background: var(--centuply-card-bg);
+  box-shadow: var(--centuply-card-shadow);
+}
+
+.footer {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(16, 185, 129, 0.12), transparent 28%),
+    #111827;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer a:hover {
+  color: #34d399;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.92rem;
+}
+
+@media screen and (max-width: 996px) {
+  .navbar {
+    min-height: 4.4rem;
+    padding: 0 0.75rem;
+  }
+
+  .theme-doc-markdown {
+    max-width: 100%;
+  }
+}
