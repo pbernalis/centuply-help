@@ -5,6 +5,7 @@ import styles from './HomepageSearch.module.css';
 
 const copy = {
   el: {
+    eyebrow: 'ΑΝΑΖΗΤΗΣΗ',
     title: 'Αναζήτησε στους οδηγούς',
     subtitle: 'Βρες γρήγορα οδηγίες για δημιουργία site, editor, publish, domain, φόρμες και SEO.',
     placeholder: 'Π.χ. domain, publish, φόρμες, Visual Editor...',
@@ -17,6 +18,7 @@ const copy = {
     examples: ['publish', 'domain', 'φόρμες', 'Visual Editor'],
   },
   en: {
+    eyebrow: 'SEARCH',
     title: 'Search the help guides',
     subtitle: 'Find instructions for site creation, editing, publishing, domains, forms and SEO.',
     placeholder: 'Try domain, publish, forms, Visual Editor...',
@@ -29,6 +31,7 @@ const copy = {
     examples: ['publish', 'domain', 'forms', 'Visual Editor'],
   },
   es: {
+    eyebrow: 'BUSCAR',
     title: 'Busca en las guías',
     subtitle: 'Encuentra instrucciones para crear, editar, publicar, dominios, formularios y SEO.',
     placeholder: 'Prueba dominio, publicar, formularios, Visual Editor...',
@@ -39,6 +42,72 @@ const copy = {
     open: 'Abrir guía',
     clear: 'Limpiar',
     examples: ['publicar', 'dominio', 'formularios', 'Visual Editor'],
+  },
+};
+
+const categoryLabels = {
+  el: {
+    'getting started': 'Ξεκινώντας',
+    'ai builder': 'Δημιουργία με AI',
+    editor: 'Editor',
+    pages: 'Σελίδες',
+    media: 'Πολυμέσα',
+    collections: 'Συλλογές',
+    brand: 'Brand',
+    seo: 'SEO',
+    blog: 'Blog',
+    localization: 'Γλώσσες',
+    publishing: 'Δημοσίευση',
+    domains: 'Domains',
+    forms: 'Φόρμες',
+    leads: 'Leads',
+    chatbot: 'Chatbot',
+    bookings: 'Κρατήσεις',
+    commerce: 'Προσφορές',
+    support: 'Υποστήριξη',
+    account: 'Λογαριασμός',
+  },
+  en: {
+    'getting started': 'Getting Started',
+    'ai builder': 'AI Builder',
+    editor: 'Editor',
+    pages: 'Pages',
+    media: 'Media',
+    collections: 'Collections',
+    brand: 'Brand',
+    seo: 'SEO',
+    blog: 'Blog',
+    localization: 'Languages',
+    publishing: 'Publishing',
+    domains: 'Domains',
+    forms: 'Forms',
+    leads: 'Leads',
+    chatbot: 'Chatbot',
+    bookings: 'Bookings',
+    commerce: 'Commerce',
+    support: 'Support',
+    account: 'Account',
+  },
+  es: {
+    'getting started': 'Primeros pasos',
+    'ai builder': 'AI Builder',
+    editor: 'Editor',
+    pages: 'Páginas',
+    media: 'Media',
+    collections: 'Colecciones',
+    brand: 'Brand',
+    seo: 'SEO',
+    blog: 'Blog',
+    localization: 'Idiomas',
+    publishing: 'Publicación',
+    domains: 'Dominios',
+    forms: 'Formularios',
+    leads: 'Leads',
+    chatbot: 'Chatbot',
+    bookings: 'Reservas',
+    commerce: 'Comercio',
+    support: 'Soporte',
+    account: 'Cuenta',
   },
 };
 
@@ -55,6 +124,11 @@ function normalize(value) {
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/ς/g, 'σ')
     .trim();
+}
+
+function getCategoryLabel(category, locale) {
+  const key = normalize(category);
+  return categoryLabels[locale]?.[key] || category;
 }
 
 function scoreItem(item, terms) {
@@ -104,11 +178,9 @@ export default function HomepageSearch({ locale }) {
       <div className="container">
         <div className={styles.searchPanel}>
           <div className={styles.searchHeader}>
-            <div>
-              <span className={styles.searchEyebrow}>Search</span>
-              <h2>{t.title}</h2>
-              <p>{t.subtitle}</p>
-            </div>
+            <span className={styles.searchEyebrow}>{t.eyebrow}</span>
+            <h2>{t.title}</h2>
+            <p>{t.subtitle}</p>
           </div>
 
           <div className={styles.searchBox}>
@@ -144,7 +216,7 @@ export default function HomepageSearch({ locale }) {
             <div className={styles.resultsGrid}>
               {results.map((item) => (
                 <Link className={styles.resultCard} to={item.permalink} key={item.permalink}>
-                  <span>{item.category}</span>
+                  <span>{getCategoryLabel(item.category, activeLocale)}</span>
                   <strong>{item.title}</strong>
                   <p>{item.description || item.excerpt}</p>
                   <em>{t.open} →</em>
