@@ -1,0 +1,240 @@
+.searchSection {
+  padding: 0 0 4.75rem;
+  margin-top: -2.35rem;
+  background: var(--centuply-page-bg);
+  position: relative;
+  z-index: 2;
+}
+
+.searchPanel {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 1.35rem;
+  border: 1px solid var(--centuply-border);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(16, 185, 129, 0.12), transparent 28%),
+    var(--centuply-card-bg);
+  box-shadow: var(--centuply-card-shadow-hover);
+}
+
+.searchHeader {
+  margin-bottom: 1rem;
+}
+
+.searchEyebrow {
+  display: inline-flex;
+  margin-bottom: 0.45rem;
+  padding: 0.32rem 0.62rem;
+  border-radius: 999px;
+  color: var(--ifm-color-primary);
+  background: var(--centuply-icon-bg);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.searchHeader h2 {
+  margin: 0;
+  color: var(--centuply-heading);
+  font-size: clamp(1.85rem, 3vw, 2.75rem);
+  letter-spacing: -0.045em;
+}
+
+.searchHeader p {
+  max-width: 760px;
+  margin: 0.45rem 0 0;
+  color: var(--centuply-text-muted);
+  line-height: 1.65;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.72rem 0.8rem;
+  border: 1px solid var(--centuply-border);
+  border-radius: 22px;
+  background: var(--centuply-section-bg);
+}
+
+.searchIcon {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--ifm-color-primary);
+  background: var(--centuply-card-bg);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.searchBox input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: var(--centuply-heading);
+  background: transparent;
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+.searchBox input::placeholder {
+  color: var(--centuply-text-muted);
+}
+
+.searchBox button,
+.exampleChips button {
+  border: 0;
+  cursor: pointer;
+  border-radius: 999px;
+  font-weight: 850;
+}
+
+.searchBox button {
+  padding: 0.58rem 0.82rem;
+  color: var(--centuply-heading);
+  background: var(--centuply-card-bg);
+}
+
+.exampleChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
+.exampleChips button {
+  padding: 0.48rem 0.72rem;
+  color: var(--centuply-text);
+  background: var(--centuply-section-bg);
+  border: 1px solid var(--centuply-border);
+}
+
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 1.25rem 0 0.85rem;
+  color: var(--centuply-heading);
+}
+
+.resultsHeader span {
+  display: inline-grid;
+  min-width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--ifm-color-primary);
+  background: var(--centuply-icon-bg);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.resultCard {
+  min-height: 160px;
+  padding: 1rem;
+  border: 1px solid var(--centuply-border);
+  border-radius: 20px;
+  color: var(--centuply-text);
+  background: var(--centuply-card-bg);
+  text-decoration: none;
+  transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
+}
+
+.resultCard:hover {
+  color: var(--centuply-text);
+  border-color: var(--centuply-border-strong);
+  box-shadow: var(--centuply-card-shadow);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.resultCard span {
+  display: inline-flex;
+  margin-bottom: 0.55rem;
+  color: var(--ifm-color-primary);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.resultCard strong {
+  display: block;
+  color: var(--centuply-heading);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.resultCard p {
+  margin: 0.48rem 0 0;
+  color: var(--centuply-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.resultCard em {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: var(--ifm-color-primary);
+  font-style: normal;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.emptyState {
+  padding: 1rem;
+  border: 1px dashed var(--centuply-border);
+  border-radius: 18px;
+  color: var(--centuply-text-muted);
+  background: var(--centuply-section-bg);
+}
+
+.emptyState strong {
+  display: block;
+  color: var(--centuply-heading);
+  margin-bottom: 0.3rem;
+}
+
+.emptyState p {
+  margin: 0;
+}
+
+@media screen and (max-width: 996px) {
+  .searchSection {
+    margin-top: 0;
+    padding-top: 1.5rem;
+  }
+
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .searchPanel {
+    border-radius: 24px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .searchBox {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .searchIcon {
+    display: none;
+  }
+
+  .searchBox button {
+    width: 100%;
+  }
+}

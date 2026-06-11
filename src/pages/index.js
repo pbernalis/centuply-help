@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import HomepageSearch from '../components/HomepageSearch';
 
 const copy = {
   el: {
@@ -314,6 +315,7 @@ export default function Home() {
     <Layout title={t.title} description={t.subtitle}>
       <HomepageHero t={t} />
       <main>
+        <HomepageSearch locale={i18n?.currentLocale} />
         <CategoryGrid t={t} />
         <PopularGuides t={t} />
         <RecommendedPath t={t} />
@@ -322,5 +324,7 @@ export default function Home() {
     </Layout>
   );
 }
+
+
 
 
