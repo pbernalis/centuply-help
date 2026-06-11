@@ -1,0 +1,275 @@
+---
+title: "DNS Troubleshooting: common domain issues"
+description: "How to find and fix common DNS, domain, www, SSL, and verification issues in Centuply."
+---
+
+# DNS Troubleshooting: common domain issues
+
+If your custom domain does not open correctly, does not verify, or shows an SSL warning, the issue is usually related to DNS settings.
+
+This guide helps you check the most common domain connection problems in Centuply.
+
+## When to use this guide
+
+Use this guide when:
+
+- the domain does not open,
+- www works but the root domain does not,
+- the root domain works but www does not,
+- the domain does not verify,
+- an SSL warning appears,
+- the domain opens an old website,
+- DNS changes are not visible yet,
+- you are not sure whether DNS records are correct.
+
+## Before you start
+
+Before making changes, make sure you have:
+
+- access to the Centuply website,
+- access to the DNS panel of the domain provider,
+- the correct DNS instructions from Centuply,
+- the domain typed correctly,
+- some waiting time after the latest DNS changes.
+
+Do not keep changing DNS records without a reason, because this may delay stabilization.
+
+## Problem 1 — The domain does not open at all
+
+If the domain does not open, possible causes include:
+
+- the correct DNS records have not been added,
+- DNS changes have not propagated,
+- the host or target is wrong,
+- there is a conflicting record,
+- the domain has expired,
+- the domain is not pointing to Centuply yet.
+
+### What to do
+
+1. Open the DNS panel of your provider.
+2. Check that the records exist.
+3. Compare type, host, and value with the Centuply instructions.
+4. Fix any mistakes.
+5. Wait for DNS propagation.
+6. Verify again in Centuply.
+
+## Problem 2 — www works but the root domain does not
+
+Example:
+
+- `www.example.com` opens correctly,
+- `example.com` does not open.
+
+This usually means that `www` has the correct CNAME, but the root domain does not have the correct record or redirect.
+
+### What to check
+
+Check whether there is a correct record for the root domain.
+
+The root domain may appear as:
+
+- `@`,
+- empty host,
+- `example.com`,
+- root,
+- apex domain.
+
+The naming may differ depending on the provider.
+
+## Problem 3 — The root domain works but www does not
+
+Example:
+
+- `example.com` opens correctly,
+- `www.example.com` does not open.
+
+This usually means that the CNAME record for `www` is missing or incorrect.
+
+### What to do
+
+1. Open DNS Management.
+2. Check whether there is a record for `www`.
+3. If it is missing, add the record provided by Centuply.
+4. If there is an incorrect record, fix it.
+5. Wait for propagation.
+6. Check `www` again.
+
+## Problem 4 — The domain does not verify
+
+If Centuply cannot verify the domain, possible causes include:
+
+- the verification record is missing,
+- the TXT record has the wrong value,
+- the host was typed incorrectly,
+- DNS changes are not complete yet,
+- there is a duplicate or conflicting record,
+- the record was added to the wrong DNS zone.
+
+### What to do
+
+Carefully compare the Centuply instructions with the records in your provider.
+
+Pay special attention to:
+
+- type,
+- name or host,
+- value,
+- TTL,
+- spaces at the beginning or end,
+- quotation marks added by the provider,
+- whether the record was added to the correct domain.
+
+## Problem 5 — An SSL warning appears
+
+If the browser shows a security warning, possible causes include:
+
+- the SSL certificate has not activated yet,
+- the domain is not fully verified,
+- DNS records do not point correctly,
+- www and root domain have different status,
+- there is an old certificate or cached state.
+
+### What to do
+
+1. Check that the domain is verified in Centuply.
+2. Check that the domain opens with `https://`.
+3. Wait a little if you recently changed DNS.
+4. Try another browser or an incognito window.
+5. Check both www and non-www versions.
+
+In many cases, SSL needs a little time after verification.
+
+## Problem 6 — The domain opens an old website
+
+If the domain opens an old website or old page, possible causes include:
+
+- old DNS records still exist,
+- the domain still points to old hosting,
+- there is an old redirect,
+- the browser is showing a cached version,
+- propagation has not completed.
+
+### What to do
+
+Check for old records such as:
+
+- old A records,
+- old CNAME records,
+- records pointing to old hosting,
+- forwarding rules,
+- redirect settings in the provider.
+
+If you are not sure, do not delete them immediately. Compare them first with the Centuply instructions.
+
+## Problem 7 — Changes work in one browser but not another
+
+This can happen because of cache or DNS propagation.
+
+### What to do
+
+- Try an incognito window.
+- Clear browser cache.
+- Try from a phone using mobile data.
+- Wait a little longer.
+- Check again later.
+
+Sometimes different networks see a different DNS state for a short time.
+
+## Problem 8 — There are many conflicting records
+
+If several records exist for the same host, conflicts can happen.
+
+Examples:
+
+- two CNAME records for `www`,
+- an A record and CNAME for the same host,
+- old records pointing elsewhere,
+- forwarding together with DNS records.
+
+### What to do
+
+For each host, keep only the records required by the Centuply instructions.
+
+Pay special attention to `www` and the root domain.
+
+## Problem 9 — You do not know which provider controls DNS
+
+Sometimes the domain was purchased from one provider, but DNS is controlled by another provider through nameservers.
+
+### What to check
+
+In the domain provider, check the nameservers.
+
+If the nameservers point to another provider, you need to change DNS records in the provider that controls the nameservers.
+
+Example:
+
+- the domain was purchased from Provider A,
+- nameservers point to Provider B,
+- DNS changes must be made in Provider B.
+
+## Quick checklist
+
+Before asking for help, check:
+
+- The domain is active and not expired.
+- DNS records exist.
+- The host is correct.
+- The value is correct.
+- There are no conflicting records.
+- A few minutes or hours have passed for propagation.
+- Centuply shows the domain as verified or pending.
+- Both www and non-www have been checked.
+- SSL has had time to activate.
+
+## Best practices
+
+- Make one change at a time.
+- Take a screenshot before changing DNS records.
+- Do not delete records if you do not know what they do.
+- Use the exact Centuply instructions.
+- Wait for propagation.
+- Check from another browser or network.
+- Do not keep changing DNS settings while waiting.
+
+## Video tutorial
+
+Suggested video for this article:
+
+**Title:** DNS Troubleshooting for custom domains in Centuply
+
+**Duration:** 5-7 minutes
+
+**Video flow:**
+
+1. Open domain settings in Centuply.
+2. Check verification status.
+3. Open the DNS provider.
+4. Check the www CNAME.
+5. Check the root domain record.
+6. Find conflicting records.
+7. Check SSL.
+8. Final live test.
+
+## Frequently asked questions
+
+### How long does DNS propagation take?
+
+It may take a few minutes, but sometimes it can take several hours.
+
+### Why does the domain work on my phone but not my computer?
+
+This is probably because of cache or different DNS updates across networks.
+
+### Can I have two CNAME records for the same www host?
+
+Usually no. The same host should not have conflicting records.
+
+### Why does SSL not activate immediately?
+
+SSL often activates after the domain is verified and DNS records point correctly.
+
+### What should I do if I cannot find the mistake?
+
+Take screenshots of the DNS records and the Centuply instructions, then compare the values one by one.
